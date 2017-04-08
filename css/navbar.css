@@ -1,0 +1,133 @@
+@media (min-width: 811px) {
+    #nav-bar-wrapper {
+        padding-right: 20px;
+        z-index: 2;
+    }
+
+    #nav-bar-icon {
+        display: none;
+    }
+
+    #nav-bar {
+        z-index: 1;
+        height: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        align-content: flex-end;
+        list-style: none;
+    }
+
+    .nav-bar-item {
+        width: auto;
+        min-width: 100px;
+        padding: 4px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-bar-item:hover {
+        /*border-bottom: 4px solid #00b600;*/
+        border-bottom: 4px solid #2ECC40;
+        padding-bottom: 0px;
+    }
+}
+
+@media (max-width: 810px) {
+    #nav-bar-wrapper {
+        z-index: 2;
+        width: 100%;
+        background-color: #363b3f;
+        position: relative;
+        top: -6px;
+        left: -10px;
+        display: none;
+    }
+
+    #nav-bar-icon {
+        position: absolute;
+        top: 5px;
+        right: 20px;
+    }
+
+    #nav-bar {
+        z-index: 1;
+        height: 100%;
+        display: flex;
+        flex-flow: column wrap;
+        align-content: flex-end;
+        list-style: none;
+    }
+
+    .nav-bar-item {
+        width: auto;
+        min-width: 100px;
+        padding: 10px 10px;
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+    }
+
+    .sub-nav-bar {
+        overflow: auto;
+        max-height: 77vh;
+    }
+}
+
+.nav-bar-item a {
+    text-decoration: none;
+    color: white;
+}
+
+.sub-nav-bar {
+    position: absolute;
+    top: 61px;
+    left: 0px;
+    height: auto;
+    width: 100%;
+    background-color: #42474b;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    border-top: 1px solid #5f5f5f;
+    padding-top: 2px;
+}
+
+.sub-nav-bar-item {
+    width: 400px;
+    padding: 0px 25px;
+    text-align: left;
+    /*border-right: 1px solid #5f5f5f;
+    border-left: 1px solid #5f5f5f;*/
+}
+
+.sub-nav-bar-item:last-of-type, .sub-nav-bar-item:first-child {
+    /*border-right: none;
+    border-left: none;*/
+}
+
+.sub-nav-bar-item img {
+    width: 64px;
+    height: 64px;
+}
+
+.sub-nav-bar-item .content {
+    display: flex;
+    flex-flow: row wrap;
+    padding-bottom: 10px;
+}
+
+.sub-nav-bar-item a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub-nav-bar-item h1 {
+    color: rgba(0, 0, 0, 0.6);
+    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.1);
+    text-decoration: underline;
+}

@@ -1,0 +1,404 @@
+<!--
+  ____  _                          _      __          __  _         _ _
+ |  _ \(_)                        ( )     \ \        / / | |       (_) |
+ | |_) |_ _ __ ___  _ __ ___  _ __|/ ___   \ \  /\  / /__| |__  ___ _| |_ ___
+ |  _ <| | '_ ` _ \| '_ ` _ \| '__| / __|   \ \/  \/ / _ \ '_ \/ __| | __/ _ \
+ | |_) | | | | | | | | | | | | |    \__ \    \  /\  /  __/ |_) \__ \ | ||  __/
+ |____/|_|_| |_| |_|_| |_| |_|_|    |___/     \/  \/ \___|_.__/|___/_|\__\___|
+
+
+                      What are you doing back here?
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width"/>
+
+    <title>Bimm's Page</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="img/icon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="img/icon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="img/icon/manifest.json">
+    <link rel="mask-icon" href="img/icon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/particles.css">
+    <link rel="stylesheet" href="css/underConstruction.css">
+    <link rel="stylesheet" href="css/lib/jquery-ui.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet"/>
+
+
+    <script src="js/lib/jquery-3.2.0.min.js"></script>
+    <script src="js/lib/jquery-ui.min.js"></script>
+    <script src="js/lib/jquery.validate.js"></script>
+    <script src="js/lib/particles.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/lib/CookieApi.js"></script>
+
+</head>
+<body>
+<!-- Construction overlay -->
+<div id="underConstruction">
+    <a href="#" id="underConstruction-close">&times;</a>
+    <div id="underConstruction-content">
+        <h1>This website is still under construction</h1>
+        <p>If you have any suggestions feel free to email me.</p>
+    </div>
+
+</div>
+
+<!-- Page -->
+<header>
+    <div class="header-wrapper">
+        <div class="logo">
+            <a href="index.html"><img src="img/Name.png" alt="Bimmr"></a>
+        </div>
+
+        <div id="nav-bar-icon">
+            <i class="fa fa-bars fa-3x" aria-hidden="true"></i>
+        </div>
+        <div id="nav-bar-wrapper">
+            <ul id="nav-bar">
+                <li class="nav-bar-item scrollTo doNothingLink" scrollTo="#section-wrapper">
+                    <a href="#"><span>HOME </span><i class="fa fa-home"></i> </a>
+                </li>
+                <li class="nav-bar-item" class="doNothingLink">
+                    <a href="#"><span>PORTFOLIO </span><i class="fa fa-angle-double-down"
+                                                          aria-hidden="true"></i></a>
+                    <div class="sub-nav-bar">
+                        <div class="sub-nav-bar-item">
+                            <a href="https://github.com/Bimmr" target="_blank">
+                                <h1>Github</h1>
+                                <div class="content">
+                                    <p>On my Github, I have a collection <br>
+                                        of projects.<br><br>
+                                        These projects range from Personal <br>
+                                        to School, and include a few plugins <br>
+                                        for a game called "Minecraft".</p>
+                                    <img src="img/GitHub-Mark-64px.png" alt="Github">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="sub-nav-bar-item">
+                            <a href="https://www.spigotmc.org/resources/authors/bimmr.4543/" target="_blank">
+                                <h1>SpigotMc</h1>
+                                <div class="content">
+                                    <p>SpigotMc is a website devoted to helping <br>
+                                        server owners create better servers by <br>
+                                        keeping their player base entertained <br>
+                                        with multiple plugins. <br><br>
+                                        Here you'll find all the public <br>
+                                        plugins i've made.</p>
+                                    <img src="img/Spigot.png" alt="SpigotMc">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="sub-nav-bar-item">
+                            <a href="#">
+                                <h1>PlaceHolder</h1>
+                                <div class="content">
+                                    <p>This is just a placeholder,<br>
+                                        currently I don't know what to put<br>
+                                        in the nav bar... <br><br>
+                                        But I'll figure it out!</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-bar-item" class="doNothingLink"><a href="#"><span>SOME OTHER MENU </span>
+                    <i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
+                    <div class="sub-nav-bar">
+                        <div class="sub-nav-bar-item">
+                            <a href="#">
+                                <h1>Another Placeholder</h1>
+                                <div class="content">
+                                    <p>The main reason that this menu<br>
+                                        is here, is to make sure that<br>
+                                        the navbar works with multiple<br>
+                                        submenus.<br><br>
+                                        And it does!</p>
+                                    <img src="img/GitHub-Mark-Light-64px.png" alt="github">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-bar-item scrollTo doNothingLink" scrollTo=".splitter"><a
+                        href="#"><span>ABOUT</span></a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<section>
+    <div id="section-wrapper">
+        <div id="social-links-wrapper">
+            <div id="social-links">
+                <ul>
+                    <li><a href="https://twitter.com/bimmr_" target="_blank">
+                        <i class="fa fa-twitter" aria-hidden="true" style="color: #0074D9"></i>
+                    </a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/in/RandyBimm" target="_blank">
+                        <i class="fa fa-linkedin" aria-hidden="true" style="color: #7FDBFF"></i>
+                    </a></li>
+                    <li><a href="https://www.youtube.com/SniperzCiinema" target="_blank"><i
+                            class="fa fa-youtube-play" aria-hidden="true" style="color: #85144b"></i>
+                    </a></li>
+                    <li><a href="mailto:Bimmr6696+website@gmail.com" target="_blank">
+                        <i class="fa fa-envelope" aria-hidden="true" style="color: #111111"></i>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="section-header-wrapper">
+            <div id="particles-js"></div>
+            <div id="section-header">
+                <h1>RANDY BIMM</h1>
+                <p>My name is Randy, and I like to make things.</p>
+                <div id="section-header-buttons">
+                    <div id="section-header-buttons-contact" class="btn">CONTACT ME</div>
+                    <a href="assets/Resume.pdf" target="_blank">
+                        <div id="section-header-buttons-hire" class="btn">HIRE ME</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="gradient gradient-WhiteToDarkGray gradient-reverse"></div>
+        <div id="section-body">
+            <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab at, autem debitis dicta dignissimos
+                eaque, earum eligendi eum expedita fuga in incidunt molestias nam neque nesciunt nihil non
+                officia placeat quisquam quos rem sapiente temporibus vel velit voluptates? Commodi corporis,
+                cumque dolores est excepturi exercitationem explicabo id iste molestias natus, nostrum pariatur,
+                porro rem repudiandae sit unde voluptate! Ea error exercitationem ipsam ipsum, maiores nam nisi
+                optio perferendis porro, quasi quibusdam sed, similique tempore. Accusamus alias, aperiam
+                consectetur culpa cumque deleniti et eveniet fuga illo illum ipsa maxime nesciunt nihil nobis
+                non nostrum optio quaerat quo quod rem reprehenderit saepe sequi sint soluta ut vel voluptatem.
+                Architecto at eius illum impedit obcaecati quidem reiciendis! Aliquam eveniet facilis impedit,
+                nostrum omnis similique? A adipisci aliquam aspernatur at consectetur consequuntur corporis
+                cupiditate delectus, deleniti dignissimos dolor doloribus eligendi, facere id illo impedit iste
+                itaque laboriosam magnam nostrum numquam odit officiis perspiciatis placeat quas quasi rem saepe
+                sapiente sit tempora vitae voluptas voluptatem voluptatum! Accusamus aliquam aperiam atque
+                blanditiis corporis ea eius enim error et eveniet id in iste itaque iure libero magni nobis
+                optio, quae, quisquam recusandae repellat reprehenderit temporibus tenetur totam velit veniam,
+                voluptatem voluptates. Eos iusto magnam provident saepe voluptate?<br><br>
+
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab at, autem debitis dicta dignissimos
+                eaque, earum eligendi eum expedita fuga in incidunt molestias nam neque nesciunt nihil non
+                officia placeat quisquam quos rem sapiente temporibus vel velit voluptates? Commodi corporis,
+                cumque dolores est excepturi exercitationem explicabo id iste molestias natus, nostrum pariatur,
+                porro rem repudiandae sit unde voluptate! Ea error exercitationem ipsam ipsum, maiores nam nisi
+                optio perferendis porro, quasi quibusdam sed, similique tempore. Accusamus alias, aperiam
+                consectetur culpa cumque deleniti et eveniet fuga illo illum ipsa maxime nesciunt nihil nobis
+                non nostrum optio quaerat quo quod rem reprehenderit saepe sequi sint soluta ut vel voluptatem.
+                Architecto at eius illum impedit obcaecati quidem reiciendis! Aliquam eveniet facilis impedit,
+                nostrum omnis similique? A adipisci aliquam aspernatur at consectetur consequuntur corporis
+                cupiditate delectus, deleniti dignissimos dolor doloribus eligendi, facere id illo impedit iste
+                itaque laboriosam magnam nostrum numquam odit officiis perspiciatis placeat quas quasi rem saepe
+                sapiente sit tempora vitae voluptas voluptatem voluptatum! Accusamus aliquam aperiam atque
+                blanditiis corporis ea eius enim error et eveniet id in iste itaque iure libero magni nobis
+                optio, quae, quisquam recusandae repellat reprehenderit temporibus tenetur totam velit veniam,
+                voluptatem voluptates. Eos iusto magnam provident saepe voluptate?Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Ab at, autem debitis dicta dignissimos
+                eaque, earum eligendi eum expedita fuga in incidunt molestias nam neque nesciunt nihil non
+                officia placeat quisquam quos rem sapiente temporibus vel velit voluptates? Commodi corporis,
+                cumque dolores est excepturi exercitationem explicabo id iste molestias natus, nostrum pariatur,
+                porro rem repudiandae sit unde voluptate! Ea error exercitationem ipsam ipsum, maiores nam nisi
+                optio perferendis porro, quasi quibusdam sed, similique tempore. Accusamus alias, aperiam
+                consectetur culpa cumque deleniti et eveniet fuga illo illum ipsa maxime nesciunt nihil nobis
+                non nostrum optio quaerat quo quod rem reprehenderit saepe sequi sint soluta ut vel voluptatem.
+                Architecto at eius illum impedit obcaecati quidem reiciendis! Aliquam eveniet facilis impedit,
+                nostrum omnis similique? A adipisci aliquam aspernatur at consectetur consequuntur corporis
+                cupiditate delectus, deleniti dignissimos dolor doloribus eligendi, facere id illo impedit iste
+                itaque laboriosam magnam nostrum numquam odit officiis perspiciatis placeat quas quasi rem saepe
+                sapiente sit tempora vitae voluptas voluptatem voluptatum! Accusamus aliquam aperiam atque
+                blanditiis corporis ea eius enim error et eveniet id in iste itaque iure libero magni nobis
+                optio, quae, quisquam recusandae repellat reprehenderit temporibus tenetur totam velit veniam,
+                voluptatem voluptates. Eos iusto magnam provident saepe voluptate?<br><br>
+
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab at, autem debitis dicta dignissimos
+                eaque, earum eligendi eum expedita fuga in incidunt molestias nam neque nesciunt nihil non
+                officia placeat quisquam quos rem sapiente temporibus vel velit voluptates? Commodi corporis,
+                cumque dolores est excepturi exercitationem explicabo id iste molestias natus, nostrum pariatur,
+                porro rem repudiandae sit unde voluptate! Ea error exercitationem ipsam ipsum, maiores nam nisi
+                optio perferendis porro, quasi quibusdam sed, similique tempore. Accusamus alias, aperiam
+                consectetur culpa cumque deleniti et eveniet fuga illo illum ipsa maxime nesciunt nihil nobis
+                non nostrum optio quaerat quo quod rem reprehenderit saepe sequi sint soluta ut vel voluptatem.
+                Architecto at eius illum impedit obcaecati quidem reiciendis! Aliquam eveniet facilis impedit,
+                nostrum omnis similique? A adipisci aliquam aspernatur at consectetur consequuntur corporis
+                cupiditate delectus, deleniti dignissimos dolor doloribus eligendi, facere id illo impedit iste
+                itaque laboriosam magnam nostrum numquam odit officiis perspiciatis placeat quas quasi rem saepe
+                sapiente sit tempora vitae voluptas voluptatem voluptatum! Accusamus aliquam aperiam atque
+                blanditiis corporis ea eius enim error et eveniet id in iste itaque iure libero magni nobis
+                optio, quae, quisquam recusandae repellat reprehenderit temporibus tenetur totam velit veniam,
+                voluptatem voluptates. Eos iusto magnam provident saepe voluptate?
+            </div>
+            <div class="gradient gradient-WhiteToGray"></div>
+            <div class="splitter">
+                <div class="section-col">
+                    <img src="img/Logo.png">
+                    <h2>Something</h2>
+                    <p>Some text proving it</p>
+                </div>
+                <div class="section-col">
+                    <img src="img/Logo.png">
+                    <h2>Something</h2>
+                    <p>Some text proving it</p>
+                </div>
+                <div class="section-col">
+                    <img src="img/Logo.png">
+                    <h2>Something</h2>
+                    <p>Some text proving it</p>
+                </div>
+                <div class="section-col">
+                    <img src="img/Logo.png">
+                    <h2>Something</h2>
+                    <p>Some text proving it</p>
+                </div>
+                <div class="section-col">
+                    <img src="img/Logo.png">
+                    <h2>Something</h2>
+                    <p>Some text proving it</p>
+                </div>
+            </div>
+            <div class="gradient gradient-WhiteToGray gradient-reverse"></div>
+            <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium ad aliquid eaque error
+                esse fugit inventore magnam nesciunt officiis perspiciatis praesentium provident quos ratione
+                reiciendis rem repellendus repudiandae rerum tempora unde voluptate voluptatem, voluptates?
+                Accusantium, consequuntur culpa fuga incidunt nam quaerat reiciendis. Blanditiis consequatur
+                consequuntur, dolore fuga harum ipsam magni minima nemo quae quibusdam rem reprehenderit saepe
+                similique totam unde, vel vero voluptatem? Ab, at beatae blanditiis cum id laborum maxime nam
+                natus nisi possimus totam, unde voluptas! Ab amet blanditiis consequatur consequuntur maiores
+                placeat quis voluptates. Cumque doloremque eius eveniet fuga officiis quae veniam! Autem commodi
+                culpa deserunt dolores eius eveniet exercitationem, in ipsam itaque magni nisi quis quod,
+                similique ullam unde ut, vel. Accusantium aliquam, aperiam architecto aut autem commodi cumque
+                dicta distinctio est excepturi explicabo facilis fugiat hic id in inventore ipsa ipsam laborum
+                magni maxime minima molestiae mollitia nam natus nemo possimus quae quod reiciendis
+                reprehenderit rerum vero voluptas voluptate voluptatem? Accusamus aliquid aspernatur blanditiis,
+                eaque eligendi esse expedita harum laborum obcaecati optio provident quae quidem quo sit
+                suscipit tempore voluptatibus? Accusantium aliquam architecto aspernatur assumenda commodi
+                consequuntur dolore dolorem ea earum et eveniet ex exercitationem explicabo facere, fuga hic
+                illo incidunt iste minima molestiae neque obcaecati qui reprehenderit sed tempora tenetur
+                veniam? Autem beatae dolorum eius explicabo inventore nisi non nostrum ullam vel vero.
+                Consectetur eligendi obcaecati quibusdam sint? Accusamus at delectus dignissimos ducimus
+                eligendi hic ipsam nulla quaerat quisquam ratione sed sit veritatis, voluptatum. Asperiores
+                atque consequuntur debitis distinctio dolorem eius eum fuga iste laudantium, libero magnam
+                mollitia nam necessitatibus odio odit quas quis recusandae similique sint, veniam! Dolorem, ut,
+                voluptatem. Atque blanditiis consectetur dolore earum error ex expedita explicabo molestias
+                necessitatibus nemo nostrum officiis, possimus quo suscipit ut velit vero. Consectetur cumque
+                iste iusto necessitatibus quas ut, veniam veritatis. Ad, aspernatur ipsam?<br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium ad aliquid eaque error
+                esse fugit inventore magnam nesciunt officiis perspiciatis praesentium provident quos ratione
+                reiciendis rem repellendus repudiandae rerum tempora unde voluptate voluptatem, voluptates?
+                Accusantium, consequuntur culpa fuga incidunt nam quaerat reiciendis. Blanditiis consequatur
+                consequuntur, dolore fuga harum ipsam magni minima nemo quae quibusdam rem reprehenderit saepe
+                similique totam unde, vel vero voluptatem? Ab, at beatae blanditiis cum id laborum maxime nam
+                natus nisi possimus totam, unde voluptas! Ab amet blanditiis consequatur consequuntur maiores
+                placeat quis voluptates. Cumque doloremque eius eveniet fuga officiis quae veniam! Autem commodi
+                culpa deserunt dolores eius eveniet exercitationem, in ipsam itaque magni nisi quis quod,
+                similique ullam unde ut, vel. Accusantium aliquam, aperiam architecto aut autem commodi cumque
+                dicta distinctio est excepturi explicabo facilis fugiat hic id in inventore ipsa ipsam laborum
+                magni maxime minima molestiae mollitia nam natus nemo possimus quae quod reiciendis
+                reprehenderit rerum vero voluptas voluptate voluptatem? Accusamus aliquid aspernatur blanditiis,
+                eaque eligendi esse expedita harum laborum obcaecati optio provident quae quidem quo sit
+                suscipit tempore voluptatibus? Accusantium aliquam architecto aspernatur assumenda commodi
+                consequuntur dolore dolorem ea earum et eveniet ex exercitationem explicabo facere, fuga hic
+                illo incidunt iste minima molestiae neque obcaecati qui reprehenderit sed tempora tenetur
+                veniam? Autem beatae dolorum eius explicabo inventore nisi non nostrum ullam vel vero.
+                Consectetur eligendi obcaecati quibusdam sint? Accusamus at delectus dignissimos ducimus
+                eligendi hic ipsam nulla quaerat quisquam ratione sed sit veritatis, voluptatum. Asperiores
+                atque consequuntur debitis distinctio dolorem eius eum fuga iste laudantium, libero magnam
+                mollitia nam necessitatibus odio odit quas quis recusandae similique sint, veniam! Dolorem, ut,
+                voluptatem. Atque blanditiis consectetur dolore earum error ex expedita explicabo molestias
+                necessitatibus nemo nostrum officiis, possimus quo suscipit ut velit vero. Consectetur cumque
+                iste iusto necessitatibus quas ut, veniam veritatis. Ad, aspernatur ipsam?<br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium ad aliquid eaque error
+                esse fugit inventore magnam nesciunt officiis perspiciatis praesentium provident quos ratione
+                reiciendis rem repellendus repudiandae rerum tempora unde voluptate voluptatem, voluptates?
+                Accusantium, consequuntur culpa fuga incidunt nam quaerat reiciendis. Blanditiis consequatur
+                consequuntur, dolore fuga harum ipsam magni minima nemo quae quibusdam rem reprehenderit saepe
+                similique totam unde, vel vero voluptatem? Ab, at beatae blanditiis cum id laborum maxime nam
+                natus nisi possimus totam, unde voluptas! Ab amet blanditiis consequatur consequuntur maiores
+                placeat quis voluptates. Cumque doloremque eius eveniet fuga officiis quae veniam! Autem commodi
+                culpa deserunt dolores eius eveniet exercitationem, in ipsam itaque magni nisi quis quod,
+                similique ullam unde ut, vel. Accusantium aliquam, aperiam architecto aut autem commodi cumque
+                dicta distinctio est excepturi explicabo facilis fugiat hic id in inventore ipsa ipsam laborum
+                magni maxime minima molestiae mollitia nam natus nemo possimus quae quod reiciendis
+                reprehenderit rerum vero voluptas voluptate voluptatem? Accusamus aliquid aspernatur blanditiis,
+                eaque eligendi esse expedita harum laborum obcaecati optio provident quae quidem quo sit
+                suscipit tempore voluptatibus? Accusantium aliquam architecto aspernatur assumenda commodi
+                consequuntur dolore dolorem ea earum et eveniet ex exercitationem explicabo facere, fuga hic
+                illo incidunt iste minima molestiae neque obcaecati qui reprehenderit sed tempora tenetur
+                veniam? Autem beatae dolorum eius explicabo inventore nisi non nostrum ullam vel vero.
+                Consectetur eligendi obcaecati quibusdam sint? Accusamus at delectus dignissimos ducimus
+                eligendi hic ipsam nulla quaerat quisquam ratione sed sit veritatis, voluptatum. Asperiores
+                atque consequuntur debitis distinctio dolorem eius eum fuga iste laudantium, libero magnam
+                mollitia nam necessitatibus odio odit quas quis recusandae similique sint, veniam! Dolorem, ut,
+                voluptatem. Atque blanditiis consectetur dolore earum error ex expedita explicabo molestias
+                necessitatibus nemo nostrum officiis, possimus quo suscipit ut velit vero. Consectetur cumque
+                iste iusto necessitatibus quas ut, veniam veritatis. Ad, aspernatur ipsam?<br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium ad aliquid eaque error
+                esse fugit inventore magnam nesciunt officiis perspiciatis praesentium provident quos ratione
+                reiciendis rem repellendus repudiandae rerum tempora unde voluptate voluptatem, voluptates?
+                Accusantium, consequuntur culpa fuga incidunt nam quaerat reiciendis. Blanditiis consequatur
+                consequuntur, dolore fuga harum ipsam magni minima nemo quae quibusdam rem reprehenderit saepe
+                similique totam unde, vel vero voluptatem? Ab, at beatae blanditiis cum id laborum maxime nam
+                natus nisi possimus totam, unde voluptas! Ab amet blanditiis consequatur consequuntur maiores
+                placeat quis voluptates. Cumque doloremque eius eveniet fuga officiis quae veniam! Autem commodi
+                culpa deserunt dolores eius eveniet exercitationem, in ipsam itaque magni nisi quis quod,
+                similique ullam unde ut, vel. Accusantium aliquam, aperiam architecto aut autem commodi cumque
+                dicta distinctio est excepturi explicabo facilis fugiat hic id in inventore ipsa ipsam laborum
+                magni maxime minima molestiae mollitia nam natus nemo possimus quae quod reiciendis
+                reprehenderit rerum vero voluptas voluptate voluptatem? Accusamus aliquid aspernatur blanditiis,
+                eaque eligendi esse expedita harum laborum obcaecati optio provident quae quidem quo sit
+                suscipit tempore voluptatibus? Accusantium aliquam architecto aspernatur assumenda commodi
+                consequuntur dolore dolorem ea earum et eveniet ex exercitationem explicabo facere, fuga hic
+                illo incidunt iste minima molestiae neque obcaecati qui reprehenderit sed tempora tenetur
+                veniam? Autem beatae dolorum eius explicabo inventore nisi non nostrum ullam vel vero.
+                Consectetur eligendi obcaecati quibusdam sint? Accusamus at delectus dignissimos ducimus
+                eligendi hic ipsam nulla quaerat quisquam ratione sed sit veritatis, voluptatum. Asperiores
+                atque consequuntur debitis distinctio dolorem eius eum fuga iste laudantium, libero magnam
+                mollitia nam necessitatibus odio odit quas quis recusandae similique sint, veniam! Dolorem, ut,
+                voluptatem. Atque blanditiis consectetur dolore earum error ex expedita explicabo molestias
+                necessitatibus nemo nostrum officiis, possimus quo suscipit ut velit vero. Consectetur cumque
+                iste iusto necessitatibus quas ut, veniam veritatis. Ad, aspernatur ipsam?</p></div>
+        </div>
+    </div>
+</section>
+<div class="gradient gradient-WhiteToDarkGray"></div>
+<footer>
+    <div id="footer-wrapper">
+        <div class="footer-col">
+            <h2>About</h2>
+            <ul>
+                <li><a>Something</a></li>
+                <li><a>Something Else</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h2>Something</h2>
+            <ul>
+                <li><a>Something</a></li>
+                <li><a>Something Else</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h2>Something</h2>
+            <ul>
+                <li><a>Something</a></li>
+                <li><a>Something Else</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>

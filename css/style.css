@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    background-color: #5f5f5f;
+    font-family: "Open Sans", Verdana, sans-serif;
+    color: white;
+}
+
+header {
+    width: 100%;
+    background-color: #363b3f;
+    border-bottom: 1px solid #2A2F32;
+    position: fixed;
+    top: 0px;
+    height: 60px;
+    z-index: 1;
+}
+
+.header-wrapper {
+    padding: 0px 10px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.logo {
+    padding: 5px;
+    margin: 0;
+    align-self: flex-start;
+}
+
+.logo img {
+    padding: 3px;
+    max-width: 200px;
+    height: auto;
+}
+
+section {
+    background-color: white;
+}
+
+#section-wrapper {
+    margin-top: 60px;
+    color: black;
+}
+
+#social-links {
+    width: 25px;
+    height: 125px;
+    background-color: #AAAAAA;
+    border: 1px solid #666666;
+    position: fixed;
+    z-index: 1;
+    top: 20%;
+    right: -15px;
+    border-radius: 20px 0px 0px 20px;
+}
+
+@media (max-width: 750px) {
+    #social-links {
+        display: none;
+    }
+}
+
+#social-links-indicator {
+    color: #111111;
+    position: fixed;
+    z-index: 2;
+    top: 26%;
+    right: -24px;
+    transform: rotate(270deg);
+    font-size: 10px;
+}
+
+#social-links ul {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#social-links li {
+    padding: 2px 0;
+}
+
+#social-links i {
+    padding-left: 5px;
+}
+
+#section-header-wrapper {
+    overflow: hidden;
+    background: #2e2e2e url('../img/Background.jpg') no-repeat fixed 0px 0px;
+    background-size: 100% 100%;
+}
+
+#section-header-wrapper a {
+    text-decoration: none;
+}
+
+#section-header {
+    height: 99vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#section-header-buttons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -50px;
+}
+
+#section-header-buttons .btn {
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #DDDDDD;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    border: 2px solid #2ECC40;
+    border-radius: 5px;
+    width: 200px;
+    height: 50px;
+    font-weight: bold;
+    margin: 0px 10px 5px;
+}
+
+#section-header-buttons .btn:hover {
+    color: #000;
+}
+
+#section-header h1 {
+    color: #2ECC40;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+    0px 8px 13px rgba(0, 0, 0, 0.1),
+    0px 18px 23px rgba(0, 0, 0, 0.1);
+    font-size: 3em;
+    position: relative;
+    top: -100px;
+}
+
+#section-header p {
+    font-size: 1.2em;
+    color: #DDDDDD;
+    position: relative;
+    top: -100px;
+}
+
+#section-body {
+}
+
+#section-body .content {
+    margin: 0 auto;
+    padding: 10px 0px;
+    width: 90%
+}
+
+#section-body .splitter {
+    width: 100%;
+    padding: 10px 0px;
+    height: auto;
+    background-color: #AAAAAA;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-col {
+    height: 400px;
+    width: 300px;
+    margin: 20px 20px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    background-color: #eee;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    outline: 0;
+}
+
+.section-col img {
+    height: auto;
+    width: 128px;
+    padding: 15px 15px;
+    border: none;
+    border-radius: 15px;
+}
+
+.gradient {
+    height: 10px;
+}
+
+.gradient-WhiteToDarkGray {
+    background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(54, 59, 63) 100%) repeat-x;
+}
+
+.gradient-WhiteToGray {
+    background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(170, 170, 170) 100%) repeat-x;
+}
+
+.gradient-reverse {
+    transform: translate3D(0px, 0px, -1px) rotateX(180deg);
+}
+
+footer {
+    background-color: #363b3f;
+    width: 100%;
+}
+
+#footer-wrapper {
+    padding: 5px 10px;
+    margin: 0 auto;
+    color: white;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.footer-col {
+    width: 100px;
+    padding: 10px 70px;
+    font-size: 12px;
+}
+
+.footer-col h2 {
+    font-weight: 400;
+}
+
+.footer-col ul {
+    padding-top: 8px;
+    list-style: none;
+}
+
+.footer-col ul li {
+    padding: 3px 0px;
+}
+
+.footer-col ul li a {
+    color: whitesmoke;
+    text-decoration: none;
+}
