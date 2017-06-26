@@ -97,7 +97,7 @@ section {
 
 #section-header-wrapper {
     overflow: hidden;
-    background: #2e2e2e url('../img/Background.jpg') no-repeat fixed 0px 0px;
+    background: #2e2e2e url('../img/Background.jpg') no-repeat 0px 0px;
     background-size: 100% 100%;
 }
 
@@ -138,6 +138,7 @@ section {
     height: 50px;
     font-weight: bold;
     margin: 0px 10px 5px;
+    background-color: rgba(1,1,1,0.1);
 }
 
 #section-header-buttons .btn:hover {
@@ -159,6 +160,10 @@ section {
     color: #DDDDDD;
     position: relative;
     top: -100px;
+}
+
+#section-header-footer {
+    color: white;
 }
 
 #section-body {
@@ -188,11 +193,19 @@ section {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    background-color: #eee;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    /*background-color: #eee;*/
+    /*box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);*/
+    /*border: 1px solid rgba(0, 0, 0, 0.2);*/
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    border: 1px solid #CCC;
+    background: #FFF;
+
     border-radius: 6px;
     outline: 0;
+}
+
+.section-col:hover {
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.75)
 }
 
 .section-col img {
@@ -202,6 +215,30 @@ section {
     border: none;
     border-radius: 15px;
 }
+.section-info-wrapper{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #CCC;
+    font-size: 1.25em;
+}
+.section-header{
+    color: rgba(0, 0, 0, 0.6);
+    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.1);
+    padding-bottom: 5px;
+    border-bottom: 1px solid #CCC;
+    width: 80%;
+    min-width: 400px;
+    margin: 0 auto;
+    font-size: 1.5em;
+}
+.section-content{
+    width: 80%;
+    min-width: 400px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
 
 .gradient {
     height: 10px;

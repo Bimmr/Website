@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Minecraft Sign Generator</title>
+
+        <script src="../js/lib/jquery-3.2.0.min.js"></script>
+
+        <!--Styling-->
+        <style>
+            @font-face {
+                font-family: Minecraft Regular;
+                src: url('minecraft.ttf');
+            }
+
+            * {
+                font-family: "Minecraft Regular";
+            }
+
+            body {
+                width: 750px;
+                margin: 0 auto;
+                background-color: #eee;
+            }
+
+            h2 {
+                text-align: center;
+                color: rgba(0, 0, 0, 0.6);
+                text-shadow: 2px 2px 3px #bbb;
+                margin-top: 0px;
+                margin-bottom: 0px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+
+            #colorTooWrapper {
+                padding: 0;
+                margin: 0;
+                text-align: center;
+                position: relative;
+                top: -20px;
+            }
+
+            .rainbow {
+                background: linear-gradient(330deg, #9a3b3b 0%, #6c9c3a 25%, #389d9d 50%, #6f3ea3 75%, #e05252 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+
+            }
+
+            form {
+                box-shadow: 0 5px 15px #666;
+                border: 1px solid #ddd;
+                border-radius: 6px;
+                padding: 10px 10px 10px;
+                background-color: #fff;
+            }
+
+            #formTop {
+                height: 285px;
+                display: flex;
+                flex-flow: column wrap;
+                align-items: center;
+            }
+
+            #left {
+                height: 100%;
+                min-width: 58%;
+            }
+
+            #right {
+                width: 25%;
+            }
+            #right > h2{
+                 padding-top: 0;
+                 padding-bottom: 10px;
+                 margin-left: 11px;
+             }
+
+            #signWrapper {
+                margin-left: -20px;
+            }
+
+            label, input {
+                display: inline-block;
+                padding: 5px 0px;
+                margin-top: 5px;
+            }
+
+            label {
+                color: #555;
+            }
+
+            input {
+                width: 100%;
+            }
+
+            #copyButton {
+                height: 50px;
+            }
+
+        </style>
+
+    </head>
+
+    <!--HTML-->
+    <body>
+        <section>
+            <h2>Minecraft Sign Generator</h2>
+            <div id="colorTooWrapper"><span class="rainbow">You can even use color codes!</span></div>
+            <form id="form" method="GET">
+                <div id="formTop">
+                    <div id="left">
+                        <fieldset>
+                            <label for="line1">Line 1:</label>
+                            <input type="text" name="line1" id="line1" placeholder="&4Enter some text!" onkeyup="createSign()"><br>
+
+                            <label for="line2">Line 2:</label>
+                            <input type="text" name="line2" id="line2" onkeyup="createSign()"><br>
+
+                            <label for="line3">Line 3:</label>
+                            <input type="text" name="line3" id="line3" onkeyup="createSign()"><br>
+
+                            <label for="line4">Line 4:</label>
+                            <input type="text" name="line4" id="line4" onkeyup="createSign()"><br>
+                        </fieldset>
+                    </div>
+                    <div id="right">
+                        <h2>Preview</h2>
+                        <div id="signWrapper">
+                            <img src="" id="sign" width="235px" height="246px" alt="Just a preview, click the button for the better link">
+                        </div>
+                    </div>
+                </div>
+                <input id="copyButton" type="button" value="Copy Simple URL to Clipboard" onclick="copyURL()">
+                <a href="../index.html"><input type="button" value="Back to Website"></a>
+            </form>
+
+
+            <!--Hidden Things-->
+            <div id="canvasWrapper" style="display: none">
+                <input id="url">
+                <img src="sign.png" id="image" width="235px" height="246px">
+                <canvas id="canvas" width="235px" height="246px"></canvas>
+            </div>
+
+        </section>
+
+    </body>
+
+
+    <!--CODE-->
+    <script>
+        function copyURL() {
+            var website = window.location.href;
+            var link = "Sign.php?"
+                + "Line1=" + encodeURIComponent(line1)
+                + "&Line2=" + encodeURIComponent(line2)
+                + "&Line3=" + encodeURIComponent(line3)
+                + "&Line4=" + encodeURIComponent(line4);
+            var url = website+link;
+            var msg;
+            if(copyTextToClipboard(url))
+                msg = "Copied!";
+            else
+                msg = "Unable to copy link...";
+
+            var button = $("#copyButton")[0];
+            button.value = msg;
+            setTimeout(function(){
+                button.value = "Copy Simple URL to Clipboard";
+            }, 1000);
+
+            function copyTextToClipboard(text) {
+                var textArea = document.createElement("textarea");
+                textArea.style.position = 'fixed';
+                textArea.style.top = 0;
+                textArea.style.left = 0;
+                textArea.style.width = '2em';
+                textArea.style.height = '2em';
+                textArea.style.padding = 0;
+                textArea.style.border = 'none';
+                textArea.style.outline = 'none';
+                textArea.style.boxShadow = 'none';
+                textArea.style.background = 'transparent';
+                textArea.value = text;
+
+                document.body.appendChild(textArea);
+
+                textArea.select();
+
+                var successful;
+                try {
+                    successful = document.execCommand('copy');
+                } catch (err) {
+                    successful = false;
+                }
+
+                document.body.removeChild(textArea);
+                return successful;
+            }
+
+        }
+
+        /**
+         * Get a parameter from the URL(GET)
+         * @param name
+         * @returns string
+         */
+        function getParameter(name) {
+            var url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        /**
+         * Start the setup
+         */
+        var c = document.getElementById("canvas");
+        var ctx = c.getContext("2d");
+        ctx.font = "17pt Minecraft Regular";
+        var middle = c.width / 2;
+        var line1, line2, line3, line4;
+        var spacing = 25;
+
+        /**
+         * Reset the canvas
+         */
+        function reset() {
+            ctx.clearRect(0, 0, c.width, c.height);
+        }
+
+        /**
+         * Get the width of text
+         * @param text
+         * @returns Number
+         */
+        function getWidth(text) {
+            return ctx.measureText(text).width;
+        }
+
+        /**
+         * Add string to sign
+         * @param color
+         * @param text
+         * @param x
+         * @param y
+         */
+        function addToSign(color, text, x, y) {
+            ctx.fillStyle = color;
+            ctx.fillText(text, x, y);
+        }
+
+        /**
+         * Create the sign
+         */
+        function createSign() {
+            reset();
+            line1 = document.getElementById("line1").value;
+            line2 = document.getElementById("line2").value;
+            line3 = document.getElementById("line3").value;
+            line4 = document.getElementById("line4").value;
+
+            var img = document.getElementById("image");
+            ctx.drawImage(img, 0, 0);
+            var lines = [line1, line2, line3, line4];
+
+//          Go through each line
+            lines.forEach(function (line, i) {
+                if (line) {
+                    var color = "black";
+
+//                 Replace all '&.'
+                    var replacedLine = line.replace(new RegExp("&.", 'g'), "");
+
+//                 Get Starting point
+                    var x = middle - getWidth(replacedLine) / 2;
+
+//                  Go through letters
+                    for (var j = 0; j < line.length; j++) {
+                        var letter = line[j];
+
+//                      Check if we should add colors
+                        if (letter == '&' || (j > 0 && line[j - 1] == '&')) {
+                            if (j > 0 && line[j - 1] == '&') {
+                                var code = letter;
+                                if (code == '0')
+                                    color = "#000000";
+                                if (code == '1')
+                                    color = "#0000AA";
+                                if (code == '2')
+                                    color = "#00AA00";
+                                if (code == '3')
+                                    color = "#00AAAA";
+                                if (code == '4')
+                                    color = "#AA0000";
+                                if (code == '5')
+                                    color = "#AA00AA";
+                                if (code == '6')
+                                    color = "#FFAA00";
+                                if (code == '7')
+                                    color = "#AAAAAA";
+                                if (code == '8')
+                                    color = "#555555";
+                                if (code == '9')
+                                    color = "#5555FF";
+                                if (code == 'a')
+                                    color = "#55FF55";
+                                if (code == 'b')
+                                    color = "#55FFFF";
+                                if (code == 'c')
+                                    color = "#FF5555";
+                                if (code == 'd')
+                                    color = "#FF55FF";
+                                if (code == 'e')
+                                    color = "#FFFF55";
+                                if (code == 'f')
+                                    color = "#FFFFFF";
+                            }
+
+                        } else {
+
+//                           Add letters
+                            addToSign(color, letter, x, (i + 1) * spacing);
+                            x += getWidth(letter);
+                        }
+                    }
+                }
+            });
+
+//          Save image
+            var dataURL = c.toDataURL();
+            document.getElementById("sign").src = dataURL;
+        }
+        window.onload = function () {
+
+//          Re-input values into inputs
+            document.getElementById("line1").value = getParameter("line1");
+            document.getElementById("line2").value = getParameter("line2");
+            document.getElementById("line3").value = getParameter("line3");
+            document.getElementById("line4").value = getParameter("line4");
+
+//          Save values
+            line1 = document.getElementById("line1").value;
+            line2 = document.getElementById("line2").value;
+            line3 = document.getElementById("line3").value;
+            line4 = document.getElementById("line4").value;
+
+            createSign();
+        };
+
+
+    </script>
+
+</html>
