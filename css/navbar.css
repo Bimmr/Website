@@ -116,6 +116,9 @@
     flex-flow: row wrap;
     padding-bottom: 10px;
 }
+.sub-nav-bar-item .content p{
+    font-size: 16px;
+}
 
 .sub-nav-bar-item a {
     text-decoration: none;
