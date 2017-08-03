@@ -9,6 +9,7 @@ var width;
 
 $(document).ready(function () {
     setup();
+    $("#section-header-wrapper").css("background", "#2e2e2e url('img/Background.jpg') no-repeat 0px 0px");
 });
 
 /**

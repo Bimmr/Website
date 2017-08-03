@@ -12,7 +12,7 @@ body {
 
 header {
     width: 100%;
-    background-color: #363b3f;
+    background-color: rgba(32,32,32,0.94);
     border-bottom: 1px solid #2A2F32;
     position: fixed;
     top: 0px;
@@ -97,7 +97,8 @@ section {
 
 #section-header-wrapper {
     overflow: hidden;
-    background: #2e2e2e url('../img/Background.jpg') no-repeat 0px 0px;
+    background: #2e2e2e;
+    /*background: #2e2e2e url('../img/Background.jpg') no-repeat 0px 0px;*/
     background-size: 100% 100%;
 }
 
