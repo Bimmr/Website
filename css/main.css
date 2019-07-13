@@ -9,6 +9,11 @@ a{
 a:hover{
   text-decoration: none;
 }
+img[alt="www.000webhost.com"] {
+    display: none;
+}
+
+/* --- BG STYLES --- */
 .landing-bg,
 .landing-bg .overlay{
   min-height: calc(100vh - 98px);
@@ -30,6 +35,7 @@ a:hover{
 }
 .landing-bg .overlay{
     height: calc(99vh - 98px);
+    width: 100%;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -37,10 +43,15 @@ a:hover{
     text-align: center;
     background: rgba(0,0,0,0.15);
 }
+.landing-bg .overlay-content{
+  position: absolute;
+  z-index: 1;
+}
 #particles-js {
     width: 100%;
     height: 100%;
     position: absolute;
+    z-index:0;
 }
 @media(max-width:820px){
   #particles-js {
@@ -84,9 +95,7 @@ a:hover{
 .btn.primary:hover{
   background-color: #7b9c1c;
 }
-.overlay-content{
-  margin-top: 114px;
-}
+
 .logo{
   z-index: 100;
 }
