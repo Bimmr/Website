@@ -6,20 +6,19 @@
  | |_) | | | | | | | | | | | | |    \__ \    \  /\  /  __/ |_) \__ \ | ||  __/
  |____/|_|_| |_| |_|_| |_| |_|_|    |___/     \/  \/ \___|_.__/|___/_|\__\___|
 
-
                       What are you doing back here?
  -->
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width"/>
+    <meta name="viewport" content="width=device-width" />
     <title>Randy Bimm - Developer</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-
 
     <script src="js/lib/particles.js"></script>
     <script src="js/main.js"></script>
@@ -28,158 +27,299 @@
     <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-121992018-1"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
+        window.dataLayer = window.dataLayer || [];
 
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', 'UA-121992018-1');
-
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-121992018-1');
     </script>
-  </head>
+</head>
 
-  <body>
+<body>
+    <span class="quickLink" id="home"></span>
     <div class="landing-bg">
-      <div id="particleJS">
-      </div>
-      <div class="overlay">
-        <div class="overlay-content">
-          <h3>This website is still under construction</h3>
-          <h1>Check back sometime within the next 10 years</h1>
-          <p><br><a href="#contact" class=" quickLink btn primary">Contact Me</a> &nbsp; <a href="/assets/Resume.pdf" class="btn primary">Hire Me</a></p>
+        <div id="particles-js">
         </div>
-      </div>
+        <div class="overlay">
+            <div class="overlay-content">
+                <h3>This website is still under construction</h3>
+                <h1>Check back sometime within the next 10 years</h1>
+                <p>
+                    <br><a href="#contact" class=" quickLink btn primary">Contact Me</a> &nbsp; <a href="/assets/Resume.pdf" class="btn primary">Hire Me</a></p>
+            </div>
+        </div>
     </div>
     <header>
-      <div class="topbar">
-        <div class="row">
-          <div class="col-xs-12 col-sm-6">
+        <div class="topbar">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
 
-          </div>
-          <div class="col-xs-12 col-sm-6">
-            <a href="mailto:bimmr6696@gmail.com" title="Email" target="_blank"><i class="fas fa-envelope"></i> Bimmr6696@gmail.com</a>
-          </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <a href="mailto:bimmr6696@gmail.com" title="Email" target="_blank"><i class="fas fa-envelope"></i> Bimmr6696@gmail.com</a>
+                </div>
+            </div>
         </div>
-      </div>
-      <nav class="navbar">
-        <a href="/" class="logo">
-          <h1>Randy Bimm</h1>
-          <h4><strong style="font-weight: 800;">Developer</strong></h4>
-        </a>
+        <nav class="navbar">
+            <a href="/" class="logo">
+                <h1>Randy Bimm</h1>
+                <h4><strong style="font-weight: 800;">Developer</strong></h4>
+            </a>
 
-        <input type="checkbox" id="navbar-toggle">
-        <label for="navbar-toggle" class="navbar-toggle">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </label>
-        <div id="main-navigation">
-          <a href="#home" class="active">Home</a>
-          <a class="quickLink" href="#about">About Me</a>
-          <a class="quickLink" href="#projects">My Projects</a>
-          <a class="quickLink" href="#contact">Contact</a>
-        </div>
-      </nav>
+            <input type="checkbox" id="navbar-toggle">
+            <label for="navbar-toggle" class="navbar-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+            <div id="main-navigation">
+                <a class="quickLink" href="#home" class="active">Home</a>
+                <a class="quickLink" href="#about">About Me</a>
+                <a class="quickLink" href="#projects">My Projects</a>
+                <a class="quickLink" href="#portfolio">My Portfolio</a>
+                <a class="quickLink" href="#contact">Contact</a>
+            </div>
+        </nav>
     </header>
 
+    <span id="content"></span>
     <div class="container">
-      <div class="inner-container">
-        <div class="callout flush-top">
-
-          <div class="row icons">
-            <div class="col-6 col-sm-4 col-md-2">
-              <div><i class="devicon-java-plain"></i>
-                <h4 class="accent">Java</h4>
-              </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-2">
-              <div><i class="devicon-csharp-plain"></i>
-                <h4 class="accent">C#</h4>
-              </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-2">
-              <div><i class="devicon-mysql-plain"></i>
-                <h4 class="accent">MySQL</h4>
-              </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-2">
-              <div><i class="devicon-html5-plain-wordmark"></i>
-                <h4 class="accent">HTML 5</h4>
-              </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-2">
-              <div><i class="devicon-css3-plain-wordmark"></i>
-                <h4 class="accent">CSS 3</h4>
-              </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-2">
-              <div><i class="devicon-javascript-plain"></i>
-                <h4 class="accent">Javascript</h4>
-              </div>
-            </div>
-
-          </div>
-        </div>
+        <div class="inner-container">
         <span class="quickLink" id="about"></span>
-        <div class="alternateBoxes">
-          <div class="row">
-            <div class="col-12 col-sm-6">
-              <h2><img src="imgs/Background.jpg"></h2>
-            </div>
-            <div class="col-12 col-sm-6">
-              <p>t</p>
-            </div>
-          </div>
-          <div class="row">
+            <div class="callout flush-top">
 
-            <div class="col-12 col-sm-6">
-              <p>t</p>
+                <div class="row icons">
+                    <div class="col-6 col-sm-4 col-md-2">
+                        <div><i class="devicon-java-plain"></i>
+                            <h4 class="accent">Java</h4>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-2">
+                        <div><i class="devicon-csharp-plain"></i>
+                            <h4 class="accent">C#</h4>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-2">
+                        <div><i class="devicon-mysql-plain"></i>
+                            <h4 class="accent">MySQL</h4>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-2">
+                        <div><i class="devicon-html5-plain-wordmark"></i>
+                            <h4 class="accent">HTML 5</h4>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-2">
+                        <div><i class="devicon-css3-plain-wordmark"></i>
+                            <h4 class="accent">CSS 3</h4>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-2">
+                        <div><i class="devicon-javascript-plain"></i>
+                            <h4 class="accent">Javascript</h4>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-            <div class="col-12 col-sm-6">
-              <h2><img src="imgs/Background.jpg"></h2>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12 col-sm-6">
-              <h2><img src="imgs/Background.jpg"></h2>
-            </div>
-            <div class="col-12 col-sm-6">
-              <p>t</p>
-            </div>
-          </div>
-        </div>
-        <span class="quickLink" id="contact"></span>
-        <div class="callout callout-image flush-bottom" id="contactImage">
-          <div class="callout-overlay"></div>
-            <h1>Contact Me</h1>
+            <h1>About Me</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur volutpat purus ut tincidunt malesuada. Vivamus interdum urna at justo commodo vehicula. Cras dignissim urna eget orci euismod, sed ultrices eros rhoncus. Nam molestie tempus lorem et aliquam. Nullam nec dui id nunc ultrices volutpat et non nisi. Suspendisse pretium ut metus sit amet fringilla. Aliquam arcu sem, molestie in tellus id, elementum faucibus velit. Integer id magna felis. Nunc eu metus pellentesque, cursus lectus id, viverra mi. Morbi porta, libero eu maximus porttitor, massa felis bibendum sem, in rhoncus justo ex vitae turpis. Cras luctus laoreet erat, ac fringilla erat commodo in. Nulla luctus tortor lacus, et scelerisque erat placerat vitae.
+            </p>
+            <h1>Education</h1>
+            <p>
+                <strong>CONESTOGA COLLEGE: Computer Programmer Analyst #0057 (3yr)</strong> 2015-2018</p>
+            <p>Courses include:</p>
             <div class="row">
-              <div class="col-12 col-sm-6">
-                <p>t</p>
-              </div>
-              <div class="col-12 col-sm-6">
-                <p>t</p>
-              </div>
+                <div class="col-6">
+                    <ul>
+                        <li>Programming Fundamentals</li>
+                        <li>Web Foundations</li>
+                        <li>Programming Dynamic Websites</li>
+                        <li>Database - Fundamentals</li>
+                        <li>Database - SQL</li>
+                        <li>Database - Application Development</li>
+                        <li>Game Programming</li>
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <ul>
+                        <li>Mobile Application Development</li>
+                        <li>Mobile Application Development</li>
+                        <li>Systems Development - Analysis & Design</li>
+                        <li>Technology Infrastructure - Networking</li>
+                        <li>Programming Microsoft Enterprise</li>
+                        <li>Programming Distributed Applications</li>
+                    </ul>
+                </div>
             </div>
-          </div>
-      </div>
+            <h1>Core Competencies &amp; Work Related Skills</h1>
+
+            <ul>
+                <li>Strong work ethic and a loyal employee </li>
+                <li> Analytical thinker </li>
+                <li> Excellent at self-directed, or online education </li>
+                <li> Excellent customer service skills </li>
+                <li> Skilled with technical troubleshooting and problem solving </li>
+                <li> Experience teaching/tutoring peers </li>
+                <li>Strong organization and leadership skills </li>
+                <li> Work well and can follow direction under pressure and stress </li>
+                <li> Experience with website development CMS</li>
+            </ul>
+            <h4>Experienced with coding languages such as:</h4>
+            <div class="row">
+                <div class="col-6 col-sm-4">
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>PHP</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <div class="col-6 col-sm-4">
+                    <ul>
+                        <li>C</li>
+                        <li>C++</li>
+                        <li>C#</li>
+                    </ul>
+                </div>
+                <div class="col-6 col-sm-4">
+                    <ul>
+                        <li>Java</li>
+                        <li>Kotlin</li>
+                    </ul>
+                </div>
+
+            </div>
+            <h4>Experienced with a variety of computer programs such as:</h4>
+            <div class="row">
+                <div class="col-6 col-sm-4">
+                    <ul>
+                        <li>Eclipse</li>
+                        <li>IntelliJ</li>
+                        <li>Atom</li>
+                    </ul>
+                </div>
+                <div class="col-6 col-sm-4">
+                    <ul>
+                        <li>Adobe Photoshop</li>
+                        <li>Adobe After Effects</li>
+                        <li>DreamWeaver</li>
+                    </ul>
+                </div>
+                <div class="col-6 col-sm-4">
+                    <ul>
+                        <li>Microsoft Office</li>
+                        <li>Open Office</li>
+                    </ul>
+                </div>
+
+            </div>
+            <h1>Experience</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur volutpat purus ut tincidunt malesuada. Vivamus interdum urna at justo commodo vehicula. Cras dignissim urna eget orci euismod, sed ultrices eros rhoncus. Nam molestie tempus lorem et aliquam. Nullam nec dui id nunc ultrices volutpat et non nisi. Suspendisse pretium ut metus sit amet fringilla. Aliquam arcu sem, molestie in tellus id, elementum faucibus velit. Integer id magna felis. Nunc eu metus pellentesque, cursus lectus id, viverra mi. Morbi porta, libero eu maximus porttitor, massa felis bibendum sem, in rhoncus justo ex vitae turpis. Cras luctus laoreet erat, ac fringilla erat commodo in. Nulla luctus tortor lacus, et scelerisque erat placerat vitae.
+            </p>
+            <span class="quickLink" id="projects"></span>
+            <div class="callout callout-image" id="projectsBanner">
+                <div class="callout-overlay"></div>
+                <div class="centered">
+
+                    <h1>My Projects</h1>
+                </div>
+            </div>
+            <div class="alternateBoxes">
+                <div class="row">
+                    <div class="col-12 col-sm-6">
+                        <h2><img src="imgs/Signs.png"></h2>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <h2>Minecraft Sign Generator</h2>
+                        <p>A tool created to make SpigotMc developers lives easier by allowing them to show their sign support without needing to use editing software</p>
+                        <h4>Languages Used:</h4>
+                        <div class="row">
+                            <div class="col-6">
+                                <ul>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                </ul>
+                            </div>
+                            <div class="col-6">
+                                <ul>
+                                    <li>JS</li>
+                                    <li>PHP</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <p class="text-center"><a href="signs/index.html" target="_blank" class="btn primary">Launch Tool</a></p>
+
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-12 col-sm-6">
+                        <h2>SiteCrawler</h2>
+                        <p>A Chrome extention that lets you crawl a website for a Sitemap, Links and Images.</p>
+                        <h4>Features</h4>
+
+                        <ul>
+                            <li>Crawl a website to get a sitemap of the website</li>
+                            <li>Download the web pages</li>
+                            <li>Download all the web pages</li>
+                            <li>Stylesheets and Script files can be localized so they can be viewed in offline mode</li>
+                            <li>View all links on a page</li>
+                            <li>Test all links on a page</li>
+                            <li>View all images on a page</li>
+                            <li>Download all PDFs/Docs on the site/page</li>
+                            <li>Download all images on the site/page</li>
+                        </ul>
+
+                        <p class="text-center"><a href="https://chrome.google.com/webstore/detail/site-crawler/cjpikahknmebaklnmejpoceongfjolkm" target="_blank" class="btn primary">View Extention</a></p>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <h2><img src="imgs/Crawler.png"></h2>
+                    </div>
+                </div>
+                <!-- <div class="row">
+                    <div class="col-12 col-sm-6">
+                        <h2><img src="imgs/Background.jpg"></h2>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                    </div>
+                </div> -->
+            </div>
+            <span class="quickLink" id="portfolio"></span>
+            <span class="quickLink" id="contact"></span>
+            <div class="callout callout-image flush-bottom" id="contactImage">
+                <div class="callout-overlay"></div>
+                <h1>Contact Me</h1>
+                <div class="row">
+                    <div class="col-12 col-sm-6">
+                    </div>
+                    <div class="col-12 col-sm-6">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <footer>
-      <div class="inner-footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 col-md-6">
-              <img src="imgs/Logo.png" width="200px" alt="Bimmr Logo">
-              <p class="copyright">&copy; Copyright 2019</p>
-              </div>
-              <div class="col-12 col-md-6">
-                <p>Lorem Ipsum</p>
-              </div>
+        <div class="inner-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <img src="imgs/Logo.png" width="200px" alt="Bimmr Logo">
+                        <p class="copyright">&copy; Copyright 2019</p>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <p>Lorem Ipsum</p>
+                    </div>
+                </div>
             </div>
-          </div>
-      </div>
+        </div>
     </footer>
 
-  </body>
+</body>
 
 </html>
