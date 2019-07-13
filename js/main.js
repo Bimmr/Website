@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
       let lastSec = null;
       document.querySelectorAll("span.quickLink").forEach(i =>{
         let pos = i.offsetTop;
-        console.log(pos - topOffset);
         if(pos - topOffset < 0)
           lastSec = i;
       });
