@@ -215,7 +215,7 @@ header{
     background: #333333;
     width: 100%;
     margin-left: -1rem;
-    top: -98px;
+    top: -300px;
     z-index: 90;
     transition: top .5s, opacity .5s;
     opacity: 0;
