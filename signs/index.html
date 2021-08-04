@@ -4,7 +4,6 @@
         <meta charset="UTF-8">
         <title>Minecraft Sign Generator</title>
 
-        <script src="../js/lib/jquery-3.2.0.min.js"></script>
 
         <!--Styling-->
         <style>
@@ -128,11 +127,11 @@
                     <div id="right">
                         <h2>Preview</h2>
                         <div id="signWrapper">
-                            <img src="" id="sign" width="235px" height="246px" alt="Just a preview, click the button for the better link">
+                            <img src="" id="sign" width="235px" height="246px" alt="Custom Minecraft Sign">
                         </div>
                     </div>
                 </div>
-                <input id="copyButton" type="button" value="Copy Simple URL to Clipboard" onclick="copyURL()">
+                <input id="copyButton" type="button" value="Copy Image URL to Clipboard" onclick="copyURL()">
                 <a href="../index.html"><input type="button" value="Back to Website"></a>
             </form>
 
@@ -152,23 +151,17 @@
     <!--CODE-->
     <script>
         function copyURL() {
-            var website = window.location.href;
-            var link = "Sign.php?"
-                + "Line1=" + encodeURIComponent(line1)
-                + "&Line2=" + encodeURIComponent(line2)
-                + "&Line3=" + encodeURIComponent(line3)
-                + "&Line4=" + encodeURIComponent(line4);
-            var url = website+link;
+          var link = document.getElementById("sign").src;
             var msg;
-            if(copyTextToClipboard(url))
+            if(copyTextToClipboard(link))
                 msg = "Copied!";
             else
                 msg = "Unable to copy link...";
 
-            var button = $("#copyButton")[0];
+            var button = document.querySelector("#copyButton");
             button.value = msg;
             setTimeout(function(){
-                button.value = "Copy Simple URL to Clipboard";
+                button.value = "Copy Image URL to Clipboard";
             }, 1000);
 
             function copyTextToClipboard(text) {

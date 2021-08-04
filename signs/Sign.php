@@ -1,4 +1,5 @@
 <?php
+header("Access-Control-Allow-Origin: *");
 
 $img = imagecreatefrompng('sign.png');
 $font = './minecraft.ttf';
@@ -64,17 +65,15 @@ foreach ($lines as $i => $line){
     }
 }
 
-/**
-    Get the width of text given a specific font and size
-    @param fontSize
-    @param font
-    @param text
-    @return width
-*/
+//    Get the width of text given a specific font and size
+//    @param fontSize
+//    @param font
+//    @param text
+//    @return width
 function getWidth($fontSize, $font, $text){
     $box = imageftbbox($fontSize, 0, $font, $text);
     $width = $box[2]-$box[0];
-    return $width;
+    return $width+2;
 }
 
 header('Content-type: image/png');
