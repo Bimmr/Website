@@ -499,12 +499,12 @@ header.stuck~.container {
     opacity: 0;
     position: relative;
   }
-  .icons i:hover {
+  .icons>div>div:hover i {
     transition: all 0.3s;
     color: #98d78a;
     top: -10px;
   }
-  .icons i:hover+h4 {
+  .icons>div>div:hover i+h4 {
     transition: all 0.3s;
     bottom: 10px;
     opacity: 1;
@@ -545,6 +545,15 @@ header.stuck~.container {
 .text-center {
   text-align: center
 }
+.education h2{
+  font-size: 1.75rem;
+}
+.experience h2{
+  font-size: 1.75rem;
+}
+.experience h4{
+  font-size: 1.2rem;
+}
 
 .projects h2 {
   margin-bottom: 5px;
@@ -571,6 +580,12 @@ header.stuck~.container {
 
 .projects p {
   font-size: 0.85rem;
+}
+.projects p:has(+ul){
+  margin-bottom: 0.5rem
+}
+.projects ul li p{
+  margin-bottom: 0.25rem;
 }
 
 .projects .btn {
