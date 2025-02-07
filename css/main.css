@@ -47,6 +47,22 @@ a:hover {
   color: var(--accent);
 }
 
+.skip-link{
+  top: 0;
+  left: 50%;
+  position: absolute;
+  transition: transform 0.3s;
+  background: #fff;
+  padding: 2px 8px;
+  border-radius: 0 0 5px 5px;
+  transform: translate(-50%, -100%);
+  z-index: 999;
+  color: var(--accent);
+}
+.skip-link:focus{
+  transform: translate(-50%, 0);
+}
+
 /* --- BG STYLES --- */
 
 .landing-bg, .landing-bg .overlay {
@@ -545,14 +561,58 @@ header.stuck~.container {
 .text-center {
   text-align: center
 }
-.education h2{
+.header-meta{
+  font-size: .75em;
+  opacity: 0.8;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+h2{
   font-size: 1.75rem;
 }
-.experience h2{
-  font-size: 1.75rem;
-}
-.experience h4{
+h3{
   font-size: 1.2rem;
+  position: relative;
+}
+.education-school{
+  margin-left: 10px;
+}
+.experience h3::before{
+  content: '';
+  position: absolute;
+  height: 8px;
+  width: 8px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -14px;
+}
+.experience-job{
+  position: relative;
+  padding-left: 10px;
+  margin-left: 10px;
+  --experience-job-circle-width: 8px;
+}
+
+.experience-job::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: calc(100% - var(--experience-job-circle-width));
+  width: 1px;
+  background: rgba(140, 140, 140, 0.2);
+  border-radius: 4px;
+}
+.experience-job::before{
+  top: calc(25% + calc(var(--experience-job-circle-width) / 2));
+  height: calc(100% - var(--experience-job-circle-width));
+}
+
+.experience-job:last-of-type::before{
+  content: unset;
 }
 
 .projects h2 {
